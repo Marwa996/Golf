@@ -2,42 +2,32 @@
 
 @include mat.core();
 
-$app-primary: mat.define-palette(mat.$indigo-palette, 500);
-$app-accent: mat.define-palette(mat.$blue-palette, A200, A100, A400);
-$app-warn: mat.define-palette(mat.$red-palette);
-
-$app-primary-dark: mat.define-palette(mat.$indigo-palette, 900);
-$app-accent-dark: mat.define-palette(mat.$indigo-palette, 900);
-
-
-$my-dark-theme: mat.define-light-theme((
+$dark-theme: mat.define-dark-theme((
  color: (
-   primary: $app-primary,
-   accent: $app-accent,
-   warn: $app-warn,
+   primary: mat.define-palette(mat.$pink-palette),
+   accent: mat.define-palette(mat.$blue-grey-palette),
  ),
- typography: mat.define-typography-config(),
- density: 0,
+  typography: mat.define-typography-config(),
+  density: 0,
 ));
 
-$my-light-theme: mat.define-dark-theme((
+$light-theme: mat.define-light-theme((
  color: (
-   primary: $app-primary-dark,
-   accent: $app-accent-dark,
-   warn: $app-warn,
+   primary: mat.define-palette(mat.$indigo-palette),
+   accent: mat.define-palette(mat.$pink-palette),
  ),
- typography: mat.define-typography-config(),
- density: 0,
 ));
+@include mat.all-component-themes($light-theme);
 
-@include mat.core-theme($my-light-theme);
-@include mat.button-theme($my-light-theme);
+.theme-dark{
+  // @include mat.core-color($dark-theme);
+  @include mat.all-component-themes($dark-theme);
+   }
+   .theme-light{
+  // @include mat.core-theme($light-theme);
+  @include mat.all-component-themes($light-theme);
+   }
 
-@media (prefers-color-scheme: dark) {
-
-  @include mat.core-color($my-dark-theme);
-  @include mat.button-color($my-dark-theme);
- }
- //blue: #05253e
- //orange: #f4682e
- //white: #f9faf9
+//blue: #05253e
+//orange: #f4682e
+//white: #f9faf9

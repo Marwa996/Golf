@@ -2,10 +2,14 @@
     <button mat-icon-button (click)="collapsed.set(!collapsed())">
         <mat-icon>menu</mat-icon>
     </button>
- </mat-toolbar> 
+</mat-toolbar>
 <!-- mat-sidenav-container represents the whole page below the sidebar -->
 <mat-sidenav-container>
     <mat-sidenav opened mode="side" [style.width]="sidenavWidth()">
+        <!-- Theme button  -->
+        <div>
+            <mat-slide-toggle [formControl]="switchTheme" hideIcon>slide</mat-slide-toggle>
+        </div>
         <div class="sidenav-header">
             <img [width]="profilePicSize()" [height]="profilePicSize()" src="./../../../assets/comfort.png">
             <div class="header-text" [class.hide-header-text]="collapsed()">
@@ -15,7 +19,8 @@
         </div>
 
         <mat-nav-list>
-            <a mat-list-item [routerLink]="item.route" routerLinkActive #rla="routerLinkActive" [activated]="rla.isActive" *ngFor="let item of menuItems()">
+            <a mat-list-item [routerLink]="item.route" routerLinkActive #rla="routerLinkActive"
+                [activated]="rla.isActive" *ngFor="let item of menuItems()">
                 <mat-icon matListItemIcon>{{item.icon}}</mat-icon>
                 <span matListItemTitle *ngIf="!collapsed()">{{item.label}}</span>
             </a>
