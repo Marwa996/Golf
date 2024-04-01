@@ -1,0 +1,25 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$app-primary: mat.define-palette(mat.$indigo-palette, 500);
+$app-accent: mat.define-palette(mat.$blue-palette, A200, A100, A400);
+$app-warn: mat.define-palette(mat.$red-palette);
+
+$my-theme: mat.define-light-theme((
+ color: (
+   primary: $app-primary,
+   accent: $app-accent,
+   warn: $app-warn,
+ ),
+ typography: mat.define-typography-config(),
+ density: 0,
+));
+
+@include mat.core-theme($my-theme);
+
+@include mat.button-theme($my-theme);
+
+ //blue: #05253e
+ //orange: #f4682e
+ //white: #f9faf9

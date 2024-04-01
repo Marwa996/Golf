@@ -1,1 +1,23 @@
-users
+<nav mat-tab-nav-bar [tabPanel]="tabPanel">
+    <a mat-tab-link *ngFor="let link of links" (click)="toggle(link.route)" [active]="activeLink == link.route">
+       {{link.name}} </a>
+ </nav>
+ <mat-tab-nav-panel #tabPanel>
+ 
+    <div *ngIf="activeLink == 'system-users'">
+       <users-system-users-page></users-system-users-page>
+    </div>
+ 
+    <div *ngIf="activeLink == 'marketing-managers'">
+       <users-marketing-managers-page></users-marketing-managers-page>
+    </div>
+ 
+    <div *ngIf="activeLink == 'customer-service-representative'">
+       <users-customer-service-representatives-page></users-customer-service-representatives-page>
+    </div>
+
+    <div *ngIf="activeLink == 'marketing-representatives'">
+        <users-marketing-representatives-page></users-marketing-representatives-page>
+     </div>
+ 
+ </mat-tab-nav-panel>

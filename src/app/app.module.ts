@@ -1,22 +1,27 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainPageModule } from './Main/main.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { ProductsModule } from './products/products.module';
+import { ProductsRoutingModule } from './products/products-routing.module';
+import { UsersModule } from './users/users.module';
+import { MatButtonModule } from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, BrowserAnimationsModule,
     AppRoutingModule,
     MainPageModule,
-    BrowserAnimationsModule
+    ProductsModule,
+    UsersModule,
+   ProductsRoutingModule,
+   MatButtonModule
   ],
-  providers: [],
+  providers: [Document],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

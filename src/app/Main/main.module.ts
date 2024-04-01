@@ -10,7 +10,6 @@ import { AppRoutingModule } from '../app-routing.module';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { RouterOutlet } from '@angular/router';
 import {CdkAccordionModule} from '@angular/cdk/accordion';
-
 @NgModule({
   declarations: [
     MainPageComponent,
@@ -25,7 +24,7 @@ import {CdkAccordionModule} from '@angular/cdk/accordion';
     MatIconModule,
     MatSidenavModule,
     MatListModule,
-    CdkAccordionModule
+    CdkAccordionModule,
   ],
   exports: [SidenavComponent]
 })
