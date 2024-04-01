@@ -6,7 +6,11 @@ $app-primary: mat.define-palette(mat.$indigo-palette, 500);
 $app-accent: mat.define-palette(mat.$blue-palette, A200, A100, A400);
 $app-warn: mat.define-palette(mat.$red-palette);
 
-$my-theme: mat.define-light-theme((
+$app-primary-dark: mat.define-palette(mat.$indigo-palette, 900);
+$app-accent-dark: mat.define-palette(mat.$indigo-palette, 900);
+
+
+$my-dark-theme: mat.define-light-theme((
  color: (
    primary: $app-primary,
    accent: $app-accent,
@@ -16,10 +20,24 @@ $my-theme: mat.define-light-theme((
  density: 0,
 ));
 
-@include mat.core-theme($my-theme);
+$my-light-theme: mat.define-dark-theme((
+ color: (
+   primary: $app-primary-dark,
+   accent: $app-accent-dark,
+   warn: $app-warn,
+ ),
+ typography: mat.define-typography-config(),
+ density: 0,
+));
 
-@include mat.button-theme($my-theme);
+@include mat.core-theme($my-light-theme);
+@include mat.button-theme($my-light-theme);
 
+@media (prefers-color-scheme: dark) {
+
+  @include mat.core-color($my-dark-theme);
+  @include mat.button-color($my-dark-theme);
+ }
  //blue: #05253e
  //orange: #f4682e
  //white: #f9faf9
