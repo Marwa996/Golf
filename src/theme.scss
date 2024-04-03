@@ -2,32 +2,39 @@
 
 @include mat.core();
 
-$dark-theme: mat.define-dark-theme((
- color: (
-   primary: mat.define-palette(mat.$pink-palette),
-   accent: mat.define-palette(mat.$blue-grey-palette),
- ),
-  typography: mat.define-typography-config(),
-  density: 0,
-));
 
-$light-theme: mat.define-light-theme((
- color: (
-   primary: mat.define-palette(mat.$indigo-palette),
-   accent: mat.define-palette(mat.$pink-palette),
- ),
-));
+$dark-theme: mat.define-dark-theme((color: (primary: mat.define-palette(mat.$orange-palette),
+        accent: mat.define-palette(mat.$blue-grey-palette),
+      ),
+      typography: mat.define-typography-config(),
+      density: 0,
+    ));
+
+$light-theme: mat.define-light-theme((color: (primary: mat.define-palette(mat.$orange-palette, A700),
+        accent: mat.define-palette(mat.$indigo-palette, 900)),
+    ));
+
 @include mat.all-component-themes($light-theme);
 
-.theme-dark{
+.theme-dark {
   // @include mat.core-color($dark-theme);
   @include mat.all-component-themes($dark-theme);
-   }
-   .theme-light{
+}
+
+.theme-light {
   // @include mat.core-theme($light-theme);
   @include mat.all-component-themes($light-theme);
-   }
+}
 
 //blue: #05253e
 //orange: #f4682e
 //white: #f9faf9
+
+@include mat.strong-focus-indicators((border-style: dotted,
+    border-width: 4px,
+    border-radius: 2px,
+   
+  ));
+
+@include mat.strong-focus-indicators-theme(purple);
+

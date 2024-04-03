@@ -8,6 +8,10 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { ProductsPageComponent } from './products/products-page.component';
 import { CategoriesPageComponent } from './categories/categories-page.component';
 import { PriceListPageComponent } from './price-list/price-list-page.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatSortModule } from '@angular/material/sort';
+import { MatTableModule } from '@angular/material/table';
+
 @NgModule({
   declarations: [
     ProductsComponent,
@@ -20,7 +24,10 @@ import { PriceListPageComponent } from './price-list/price-list-page.component';
     AppRoutingModule,
     RouterOutlet,
     MatButtonModule,
-    MatTabsModule
+    MatTabsModule,
+    MatCardModule,
+    MatSortModule,
+    MatTableModule
   ],
   exports: []
 })
