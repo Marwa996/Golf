@@ -17,12 +17,15 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatFormFieldModule } from '@angular/material/form-field'
-import { MatInputModule } from '@angular/material/input'
+import { MatInputModule } from '@angular/material/input';
+import { LoginPageComponent } from './login-page/login-page.component'
 //End Data Tables
+
 @NgModule({
   declarations: [
     MainPageComponent,
-    SidenavComponent
+    SidenavComponent,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,

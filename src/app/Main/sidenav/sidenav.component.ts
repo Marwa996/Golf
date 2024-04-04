@@ -35,6 +35,12 @@ export class SidenavComponent implements OnInit {
             route: 'users',
             categories: ['complaints', 'requests']
         },
+        {
+            icon: 'input',
+            label: 'Login',
+            route: 'login',
+            
+        },
     ])
 
     collapsed = signal(false);
