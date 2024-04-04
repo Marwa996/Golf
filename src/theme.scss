@@ -30,11 +30,11 @@ $light-theme: mat.define-light-theme((color: (primary: mat.define-palette(mat.$o
 //orange: #f4682e
 //white: #f9faf9
 
-@include mat.strong-focus-indicators((border-style: dotted,
-    border-width: 4px,
-    border-radius: 2px,
+// @include mat.strong-focus-indicators((border-style: dotted,
+//     border-width: 4px,
+//     border-radius: 2px,
    
-  ));
+//   ));
 
-@include mat.strong-focus-indicators-theme(purple);
+// @include mat.strong-focus-indicators-theme(purple);
 

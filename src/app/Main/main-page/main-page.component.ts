@@ -2,14 +2,14 @@ import { Component, signal } from "@angular/core";
 import { AfterViewInit, ViewChild } from '@angular/core';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
-import { MatCardModule } from '@angular/material/card';
-import { MatIconModule } from '@angular/material/icon';
+import { MatSort, Sort, MatSortModule } from '@angular/material/sort';
+import { LiveAnnouncer } from '@angular/cdk/a11y';
+
 @Component({
     selector:'app-main-page',
     templateUrl: 'main-page.component.html',
     styleUrls:['main-page.component.scss'],
-  standalone: true,
-  imports: [MatTableModule, MatPaginatorModule, MatCardModule,MatIconModule],
+ 
 })
 export class MainPageComponent implements  AfterViewInit{
 // start tabel
@@ -17,12 +17,30 @@ export class MainPageComponent implements  AfterViewInit{
 
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
-  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatPaginator,) paginator!: MatPaginator;
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
+
+  }
+
+  // tabel sorting
+  constructor(private _liveAnnouncer: LiveAnnouncer) { }
+  @ViewChild(MatSort) sort!: MatSort;
+
+  announceSortChange(sortState: Sort) {
+    if (sortState.direction) {
+      this._liveAnnouncer.announce(`Sorted ${sortState.direction}ending`);
+    } else {
+      this._liveAnnouncer.announce('Sorting cleared');
+    }
   }
 // end tabel
+
+
+
+
   expandedIndex = 0;
   menuItems = signal<MenuItem[]>([
     {
@@ -36,7 +54,13 @@ export class MainPageComponent implements  AfterViewInit{
       Bill: 112
     }
   ])
+
 }
+
+
+
+
+
 
 export type MenuItem = {
   icon: string;

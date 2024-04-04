@@ -12,12 +12,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
+//start Data Tables
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
-
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatInputModule } from '@angular/material/input'
+//End Data Tables
 @NgModule({
   declarations: [
-   
+    MainPageComponent,
     SidenavComponent
   ],
   imports: [
@@ -33,7 +37,10 @@ import { MatTableModule } from '@angular/material/table';
     MatCardModule,
     MatSortModule,
     MatTableModule,
-    MainPageComponent,
+    MatPaginatorModule,
+    MatInputModule,
+    MatFormFieldModule
+    
   ],
   exports: [SidenavComponent]
 })

@@ -9,9 +9,13 @@ import { ProductsPageComponent } from './products/products-page.component';
 import { CategoriesPageComponent } from './categories/categories-page.component';
 import { PriceListPageComponent } from './price-list/price-list-page.component';
 import { MatCardModule } from '@angular/material/card';
+//start Data Tables
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
-
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatInputModule } from '@angular/material/input'
+//End Data Tables
 @NgModule({
   declarations: [
     ProductsComponent,
@@ -27,7 +31,10 @@ import { MatTableModule } from '@angular/material/table';
     MatTabsModule,
     MatCardModule,
     MatSortModule,
-    MatTableModule
+    MatTableModule,
+    MatPaginatorModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   exports: []
 })
