@@ -8,10 +8,11 @@
 h1 {
      padding-top: 1rem;
      text-align: center;
+     font-weight: 600;
 }
 
 .sty-form-login {
-     background-color:#f5e3dcea;
+     // background-color:#f5e3dcea;
     
      width: 80%;
      margin: 0 auto;
@@ -54,4 +55,8 @@ input.example-right-align::-webkit-inner-spin-button {
 
 input.example-right-align {
      -moz-appearance: textfield;
+}
+.mat-mdc-unelevated-button{
+     height: 56px;
+     font-size: 16px;
 }

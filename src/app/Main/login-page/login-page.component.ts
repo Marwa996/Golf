@@ -1,46 +1,48 @@
 import { Component } from '@angular/core';
-import { FormControl, Validators, FormsModule, ReactiveFormsModule, FormGroup } from '@angular/forms';
-import { NgIf } from '@angular/common';
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import {
+  FormControl,
+  Validators,
+  FormGroup,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-login-page',
   templateUrl: './login-page.component.html',
-  styleUrls: ['./login-page.component.scss']
+  styleUrls: ['./login-page.component.scss'],
 })
 export class LoginPageComponent {
   hide = true;
-  
+  loginForm: FormGroup = new FormGroup({});
 
-  loginForm: FormGroup = new FormGroup({
-    // phone_number : new FormControl(null, [Validators.required, Validators.maxLength(11), Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")])
-});
+  phoneNumber = new FormControl(null, [
+    Validators.required,
+    Validators.maxLength(11),
+    Validators.pattern('^01[0125][0-9]{8}$'),
+  ]);
 
-  phone_number=new FormControl(null, [Validators.required, Validators.maxLength(11), Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]);
+  password = new FormControl(null, [
+    Validators.required,
+    Validators.minLength(5),
+  ]);
 
-  Password = new FormControl(null, [Validators.required, Validators.minLength(5)])
-  
-
-  getErrorMessagePhone() {
-    if (this.phone_number.hasError('required')) {
+  getErrorMessageForPhoneNumberControl() {
+    if (this.phoneNumber.hasError('required')) {
       return 'You must enter a value';
     }
-
-    return this.phone_number.hasError('maxLength') ? ' valid  11 number' : '';
-
+    return 'Invalid phone number (max 11 digits)';
   }
 
-  getErrorMessagePassword() {
-    if (this.Password.hasError('required')) {
+  getErrorMessageForPasswordControl() {
+    if (this.password.hasError('required')) {
       return 'You must enter a value';
     }
-
-    return this.Password.hasError('minLength') ? ' valid Password 5 number' : '';
+    return 'Invalid password (min 5 digits)';
   }
 
-  Data_form(){
-    let login = { "phone_number": this.phone_number.value, "password": this.Password.value };
-    console.log(login) 
+  userLoginData() {
+    let login = {
+      phone_number: this.phoneNumber.value,
+      password: this.password.value,
+    };
   }
 }

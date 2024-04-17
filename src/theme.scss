@@ -2,7 +2,6 @@
 
 @include mat.core();
 
-
 $dark-theme: mat.define-dark-theme((color: (primary: mat.define-palette(mat.$orange-palette),
         accent: mat.define-palette(mat.$blue-grey-palette),
       ),
@@ -10,8 +9,8 @@ $dark-theme: mat.define-dark-theme((color: (primary: mat.define-palette(mat.$ora
       density: 0,
     ));
 
-$light-theme: mat.define-light-theme((color: (primary: mat.define-palette(mat.$orange-palette, A700),
-        accent: mat.define-palette(mat.$indigo-palette, 900)),
+$light-theme: mat.define-light-theme((color: (primary: mat.define-palette(mat.$orange-palette),
+        accent: mat.define-palette(mat.$blue-grey-palette, 900))
     ));
 
 @include mat.all-component-themes($light-theme);

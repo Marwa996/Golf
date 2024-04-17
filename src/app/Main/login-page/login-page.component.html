@@ -2,27 +2,26 @@
      <img src="http://elgolfapp.com/images/logo.png">
 </div>
 
-
      <div class="sty-form-login example-container ">
           <h1>Login</h1>
          <form >
                <mat-form-field>
                     <mat-label>Enter your Phone</mat-label>
-                    <input matInput placeholder="01149761698" [formControl]="phone_number" required >
-                    <mat-error *ngIf="phone_number.invalid">{{getErrorMessagePhone()}}</mat-error>
+                    <input matInput placeholder="01149761698" [formControl]="phoneNumber" required >
+                    <mat-error *ngIf="phoneNumber.invalid">{{getErrorMessageForPhoneNumberControl()}}</mat-error>
                </mat-form-field>
              
                <mat-form-field>
                     <mat-label>Enter your password</mat-label>
-                    <input matInput [type]="hide ? 'password' : 'text'" [formControl]="Password" required>
-                    <mat-error *ngIf="Password.invalid">{{getErrorMessagePassword()}}</mat-error>
+                    <input matInput [type]="hide ? 'password' : 'text'" [formControl]="password" required>
+                    <mat-error *ngIf="password.invalid">{{getErrorMessageForPasswordControl()}}</mat-error>
                     <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
                          [attr.aria-pressed]="hide">
                          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                     </button>
-                    
                </mat-form-field>
              
-               <button mat-flat-button color="primary" (click)="Data_form()">submit</button>
+               <button mat-flat-button type="submit" color="primary" (click)="userLoginData()">Submit</button>
+
           </form>
      </div>
