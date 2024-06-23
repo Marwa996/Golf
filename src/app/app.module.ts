@@ -8,6 +8,7 @@ import { ProductsModule } from './products/products.module';
 import { ProductsRoutingModule } from './products/products-routing.module';
 import { UsersModule } from './users/users.module';
 import { MatButtonModule } from '@angular/material/button';
+import { SharedModule } from 'src/shared/libs/shared.module';
 @NgModule({
   declarations: [
     AppComponent

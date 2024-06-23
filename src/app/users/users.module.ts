@@ -9,20 +9,22 @@ import { SystemUsersPageComponent } from './system-users/system-users.component'
 import { MarketingManagersPageComponent } from './matketing-managers/marketing-managers.component';
 import { CustomerServiceRepresentativesComponent } from './customer-service-representatives/customer-service-representatives.component';
 import { MarketingRepresentativesPageComponent } from './marketing-representatives/marketing-representatives.component';
+import { SharedModule } from 'src/shared/libs/shared.module';
 @NgModule({
   declarations: [
     UsersComponent,
     SystemUsersPageComponent,
     MarketingManagersPageComponent,
     CustomerServiceRepresentativesComponent,
-    MarketingRepresentativesPageComponent
+    MarketingRepresentativesPageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterOutlet,
     MatButtonModule,
-    MatTabsModule
+    MatTabsModule,
+    SharedModule
   ],
   exports: []
 })
