@@ -1,33 +1,33 @@
-@use '@angular/material' as mat;
-
+@use "@angular/material" as mat;
+@use "./styles.scss" as custom;
 @include mat.core();
 
-$dark-theme: mat.define-dark-theme((
- color: (
-   primary: mat.define-palette(mat.$pink-palette),
-   accent: mat.define-palette(mat.$blue-grey-palette),
- ),
-  typography: mat.define-typography-config(),
-  density: 0,
-));
+$dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: mat.define-palette(custom.$my-custom-palette),
+      accent: mat.define-palette(mat.$blue-grey-palette),
+    ),
+  )
+);
 
-$light-theme: mat.define-light-theme((
- color: (
-   primary: mat.define-palette(mat.$indigo-palette),
-   accent: mat.define-palette(mat.$pink-palette),
- ),
-));
+$light-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: mat.define-palette(mat.$deep-purple-palette),
+      accent: mat.define-palette(mat.$pink-palette),
+    ),
+  )
+);
+
 @include mat.all-component-themes($light-theme);
 
-.theme-dark{
-  // @include mat.core-color($dark-theme);
+.theme-dark {
+  @include mat.core();
   @include mat.all-component-themes($dark-theme);
-   }
-   .theme-light{
-  // @include mat.core-theme($light-theme);
-  @include mat.all-component-themes($light-theme);
-   }
+}
 
-//blue: #05253e
-//orange: #f4682e
-//white: #f9faf9
+.theme-light {
+  @include mat.core();
+  @include mat.all-component-themes($light-theme);
+}
