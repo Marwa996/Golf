@@ -3,16 +3,60 @@
 // html, body { height: 100%; }
 // body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
+@use "@angular/material" as mat;
+@use "./theme.scss" as custom;
+@include mat.core();
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    margin: 0;
-    position: relative;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-    
+body {
+  margin: 0;
+  position: relative;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-html, body { height: 100%; }
+html,
+body {
+  height: 100%;
+}
+
+$dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      // primary: mat.define-palette(custom.$my-custom-palette),
+      primary: mat.define-palette(mat.$pink-palette),
+      accent: mat.define-palette(mat.$blue-grey-palette),
+    ),
+  )
+);
+
+$light-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: mat.define-palette(mat.$deep-purple-palette),
+      accent: mat.define-palette(mat.$pink-palette),
+    ),
+  )
+);
+
+// @include mat.all-component-themes($light-theme);
+
+.theme-dark {
+  @include mat.core();
+  @include mat.all-component-themes($dark-theme);
+}
+
+.theme-light {
+  @include mat.core();
+  @include mat.all-component-themes($light-theme);
+}
+
+@media (prefers-color-scheme: light) {
+  @include mat.all-component-themes($light-theme);
+}
+
+@media (prefers-color-scheme: dark) {
+  @include mat.all-component-themes($dark-theme);
+}
