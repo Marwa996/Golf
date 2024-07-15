@@ -17,6 +17,7 @@ import { MatTableDataSource } from '@angular/material/table';
 export class GolfTableComponent<T> implements OnInit, AfterViewInit {
   @Input() data: T[] = [];
   @Input() columns: TableDefinition<T>[] = [];
+  @Input() tableName: string = '';
   displayedColumns: string[] = [];
   dataSource = new MatTableDataSource<any>();
   @ViewChild(MatPaginator) paginator!: MatPaginator;
