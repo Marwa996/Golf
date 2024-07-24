@@ -5,24 +5,23 @@ import { AppComponent } from './app.component';
 import { MainPageModule } from './Main/main.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductsModule } from './products/products.module';
-import { ProductsRoutingModule } from './products/products-routing.module';
 import { UsersModule } from './users/users.module';
 import { MatButtonModule } from '@angular/material/button';
 import { SharedModule } from 'src/shared/libs/shared.module';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
-    BrowserModule, BrowserAnimationsModule,
+    BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     MainPageModule,
     ProductsModule,
     UsersModule,
-   ProductsRoutingModule,
-   MatButtonModule
+    MatButtonModule,
+    HttpClientModule,
   ],
   providers: [Document],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

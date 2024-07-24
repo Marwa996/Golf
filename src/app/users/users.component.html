@@ -10,11 +10,6 @@
 </nav>
 <mat-tab-nav-panel #tabPanel>
   <div *ngIf="activeLink == 'system-users'">
-    <golf-table
-      [columns]="systemUsersDisplayedColumns"
-      [data]=""
-      [tableName]="activeLink"
-    ></golf-table>
     <!-- <users-system-users-page></users-system-users-page> -->
   </div>
 
@@ -27,6 +22,11 @@
   </div>
 
   <div *ngIf="activeLink == 'marketing-representatives'">
+    <golf-table
+      [data]="systemUsersData"
+      [columns]="systemUsersDisplayedColumns"
+      [tableName]="activeLink"
+    ></golf-table>
     <!-- <users-marketing-representatives-page></users-marketing-representatives-page> -->
   </div>
 </mat-tab-nav-panel>

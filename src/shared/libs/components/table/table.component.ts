@@ -15,17 +15,19 @@ import { MatTableDataSource } from '@angular/material/table';
   styleUrls: ['table.component.scss'],
 })
 export class GolfTableComponent<T> implements OnInit, AfterViewInit {
-  @Input() data: T[] = [];
-  @Input() columns: TableDefinition<T>[] = [];
-  @Input() tableName: string = '';
+  @Input({ required: true }) data!: T[];
+  @Input({ required: true }) columns!: TableDefinition<T>[];
+  @Input({ required: true }) tableName!: string;
   displayedColumns: string[] = [];
-  dataSource = new MatTableDataSource<any>();
+  dataSource!: MatTableDataSource<T>;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   ngOnInit(): void {
+    console.log(this.data);
     this.dataSource = new MatTableDataSource(this.data);
     this.displayedColumns = this.columns.map((c) => c.columnDef);
   }
+
   ngAfterViewInit(): void {
     this.dataSource.paginator = this.paginator;
   }

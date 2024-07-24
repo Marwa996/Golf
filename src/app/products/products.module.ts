@@ -4,24 +4,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from '../app-routing.module';
 import { RouterOutlet } from '@angular/router';
 import { ProductsComponent } from './products.component';
-import {MatTabsModule} from '@angular/material/tabs';
-import { ProductsPageComponent } from './products/products-page.component';
-import { CategoriesPageComponent } from './categories/categories-page.component';
-import { PriceListPageComponent } from './price-list/price-list-page.component';
+import { MatTabsModule } from '@angular/material/tabs';
+import { SharedModule } from '../../shared/libs/shared.module';
+
 @NgModule({
-  declarations: [
-    ProductsComponent,
-    ProductsPageComponent,
-    CategoriesPageComponent,
-    PriceListPageComponent
-  ],
+  declarations: [ProductsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterOutlet,
     MatButtonModule,
-    MatTabsModule
+    MatTabsModule,
+    SharedModule,
   ],
-  exports: []
+  exports: [],
 })
-export class ProductsModule { }
+export class ProductsModule {}

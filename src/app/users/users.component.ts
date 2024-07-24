@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { User } from 'src/shared/libs/models';
+import { UserService } from 'src/shared/libs/services/user/user.service';
 
 @Component({
   selector: 'app-users',
@@ -15,43 +17,41 @@ export class UsersComponent {
     { name: 'Marketing Managers', route: 'marketing-managers' },
     { name: 'System Users', route: 'system-users' },
   ];
-  systemUsers = [
-    // 'Image',
-    // 'Name',
-    // 'Phone Number',
-    // 'National ID Number',
-    // 'Status',
-    // 'Created At',
-    // 'Options',
+  systemUsersDisplayedColumns = [
     {
       columnDef: 'image',
       header: 'Image',
-      // cell: (element: ELEMENT) => `${element.position}`,
+      cell: (user: User) => `${user.image}`,
     },
     {
       columnDef: 'name',
       header: 'Name',
-      // cell: (element: ELEMENT) => `${element.name}`,
+      cell: (user: User) => `${user.name}`,
     },
     {
-      columnDef: 'weight',
+      columnDef: 'phoneNumber',
       header: 'Phone Number',
-      // cell: (element: ELEMENT) => `${element.weight}`,
+      cell: (user: User) => `${user.phoneNumber}`,
+    },
+    {
+      columnDef: 'passCode',
+      header: 'Pass Code',
+      cell: (user: User) => `${user.passCode}`,
     },
     {
       columnDef: 'NIDNumber',
       header: 'National ID Number',
-      // cell: (element: ELEMENT) => `${element.symbol}`,
+      cell: (user: User) => `${user.NIDNumber}`,
     },
     {
       columnDef: 'status',
       header: 'Status',
-      // cell: (element: ELEMENT) => `${element.symbol}`,
+      cell: (user: User) => `${user.status}`,
     },
     {
       columnDef: 'createdAt',
       header: 'Created At',
-      // cell: (element: ELEMENT) => `${element.symbol}`,
+      cell: (user: User) => `${user.createdAt}`,
     },
   ];
   marketingManagers = [
@@ -83,91 +83,21 @@ export class UsersComponent {
     'Options',
   ];
 
+  systemUsersData!: User[];
   activeLink = this.links[0].route;
+  constructor(private userService: UserService) {}
+
+  ngOnInit(): void {
+    this.getSystemUsers();
+  }
+
+  getSystemUsers() {
+    this.userService.getSystemUsers().subscribe((data: User[]) => {
+      this.systemUsersData = data;
+    });
+  }
 
   toggle(route: string) {
     this.activeLink = route;
   }
 }
-const ELEMENT_DATA = [
-  {
-    img: '1',
-    name: 'Hydrogen',
-    phoneNumber: 10079,
-    IDDNumber: 123,
-    status: 'active',
-    createdAt: '20-10-2023',
-  },
-  {
-    img: '2',
-    name: 'Helium',
-    phoneNumber: 40026,
-    symbol: 123,
-    status: 'active',
-    createdAt: '20-10-2023',
-  },
-  {
-    img: '3',
-    name: 'Lithium',
-    phoneNumber: 6941,
-    symbol: 123,
-    status: 'active',
-    createdAt: '20-10-2023',
-  },
-  {
-    img: '4',
-    name: 'Beryllium',
-    phoneNumber: 90122,
-    symbol: 123,
-    status: 'active',
-    createdAt: '20-10-2023',
-  },
-  {
-    img: '5',
-    name: 'Boron',
-    phoneNumber: 10811,
-    symbol: 123,
-    status: 'active',
-    createdAt: '20-10-2023',
-  },
-  {
-    img: '6',
-    name: 'Carbon',
-    phoneNumber: 120107,
-    symbol: 123,
-    status: 'active',
-    createdAt: '20-10-2023',
-  },
-  {
-    img: '7',
-    name: 'Nitrogen',
-    phoneNumber: 140067,
-    symbol: 123,
-    status: 'active',
-    createdAt: '20-10-2023',
-  },
-  {
-    img: '8',
-    name: 'Oxygen',
-    phoneNumber: 159994,
-    symbol: 123,
-    status: 'active',
-    createdAt: '20-10-2023',
-  },
-  {
-    img: '9',
-    name: 'Fluorine',
-    phoneNumber: 189984,
-    symbol: 123,
-    status: 'active',
-    createdAt: '20-10-2023',
-  },
-  {
-    img: '10',
-    name: 'Neon',
-    phoneNumber: 201797,
-    symbol: 123,
-    status: 'active',
-    createdAt: '20-10-2023',
-  },
-];
