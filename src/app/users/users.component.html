@@ -22,7 +22,9 @@
   </div>
 
   <div *ngIf="activeLink == 'marketing-representatives'">
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
     <golf-table
+      *ngIf="!isLoading"
       [data]="systemUsersData"
       [columns]="systemUsersDisplayedColumns"
       [tableName]="activeLink"

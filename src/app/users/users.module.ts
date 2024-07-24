@@ -6,6 +6,7 @@ import { RouterOutlet } from '@angular/router';
 import { MatTabsModule } from '@angular/material/tabs';
 import { UsersComponent } from './users.component';
 import { SharedModule } from 'src/shared/libs/shared.module';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 @NgModule({
   declarations: [UsersComponent],
   imports: [
@@ -15,6 +16,7 @@ import { SharedModule } from 'src/shared/libs/shared.module';
     MatButtonModule,
     MatTabsModule,
     SharedModule,
+    MatProgressSpinnerModule,
   ],
   exports: [],
 })

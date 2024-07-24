@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component } from '@angular/core';
 import { User } from 'src/shared/libs/models';
 import { UserService } from 'src/shared/libs/services/user/user.service';
 
@@ -8,6 +8,7 @@ import { UserService } from 'src/shared/libs/services/user/user.service';
   styleUrls: ['users.component.scss'],
 })
 export class UsersComponent {
+  isLoading = true;
   links = [
     { name: 'Marketing Representatives', route: 'marketing-representatives' },
     {
@@ -85,16 +86,27 @@ export class UsersComponent {
 
   systemUsersData!: User[];
   activeLink = this.links[0].route;
-  constructor(private userService: UserService) {}
+  constructor(
+    private userService: UserService,
+    private cdr: ChangeDetectorRef
+  ) {}
 
   ngOnInit(): void {
     this.getSystemUsers();
+    // setTimeout(() => (this.flag = true));
   }
 
   getSystemUsers() {
-    this.userService.getSystemUsers().subscribe((data: User[]) => {
-      this.systemUsersData = data;
+    this.userService.getSystemUsers().subscribe({
+      next: (data) => {
+        this.systemUsersData = data;
+        this.isLoading = false;
+      },
+      error: (error) => {
+        console.error('Error fetching system users:', error);
+      },
     });
+    this.cdr.detectChanges();
   }
 
   toggle(route: string) {
