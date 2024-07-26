@@ -2,7 +2,7 @@
     <a mat-tab-link *ngFor="let link of links" (click)="toggle(link.route)" [active]="activeLink == link.route">
        {{link.name}} </a>
  </nav>
- <mat-tab-nav-panel #tabPanel>
+ <mat-tab-nav-panel #tabPanel class="margin">
  
     <div *ngIf="activeLink == 'system-users'">
        <users-system-users-page></users-system-users-page>

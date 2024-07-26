@@ -1,0 +1,51 @@
+[
+  {
+    "name": "product 1",
+    "category": "category 1",
+    "createdAt": "25-7-2024",
+    "createdBy": "user 1",
+    "status": "active"
+  },
+  {
+    "name": "product 2",
+    "category": "category 2",
+    "createdAt": "25-7-2024",
+    "createdBy": "user 2",
+    "status": "active"
+  },
+  {
+    "name": "product 3",
+    "category": "category 3",
+    "createdAt": "25-7-2024",
+    "createdBy": "user 3",
+    "status": "active"
+  },
+  {
+    "name": "product 4",
+    "category": "category 4",
+    "createdAt": "25-7-2024",
+    "createdBy": "user 4",
+    "status": "active"
+  },
+  {
+    "name": "product 5",
+    "category": "category 5",
+    "createdAt": "25-7-2024",
+    "createdBy": "user 5",
+    "status": "active"
+  },
+  {
+    "name": "product 6",
+    "category": "category 6",
+    "createdAt": "25-7-2024",
+    "createdBy": "user 6",
+    "status": "active"
+  },
+  {
+    "name": "product 7",
+    "category": "category 7",
+    "createdAt": "25-7-2024",
+    "createdBy": "user 7",
+    "status": "active"
+  }
+]

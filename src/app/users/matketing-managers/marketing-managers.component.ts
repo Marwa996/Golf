@@ -26,16 +26,16 @@ export class MarketingManagersPageComponent {
     },
   ];
 
-  usersData: User[] = [
-    {
-      name: 'Sara',
-      phoneNumber: 123456789,
-      passCode: 123456,
-    },
-    {
-      name: 'Mavin',
-      phoneNumber: 123456789,
-      passCode: 123456,
-    },
-  ];
+  // usersData: User[] = [
+  //   {
+  //     name: 'Sara',
+  //     phoneNumber: 123456789,
+  //     passCode: 123456,
+  //   },
+  //   {
+  //     name: 'Mavin',
+  //     phoneNumber: 123456789,
+  //     passCode: 123456,
+  //   },
+  // ];
 }

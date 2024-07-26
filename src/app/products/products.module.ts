@@ -8,6 +8,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import { ProductsPageComponent } from './products/products-page.component';
 import { CategoriesPageComponent } from './categories/categories-page.component';
 import { PriceListPageComponent } from './price-list/price-list-page.component';
+import { SharedModule } from 'src/shared/libs/shared.module';
 @NgModule({
   declarations: [
     ProductsComponent,
@@ -20,7 +21,8 @@ import { PriceListPageComponent } from './price-list/price-list-page.component';
     AppRoutingModule,
     RouterOutlet,
     MatButtonModule,
-    MatTabsModule
+    MatTabsModule,
+    SharedModule,
   ],
   exports: []
 })

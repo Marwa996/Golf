@@ -1,0 +1,68 @@
+[33mcommit 7b20fb2d9970dbf3f5255766b13df5018742336b[m[33m ([m[1;36mHEAD -> [m[1;32menhancement/project-structure[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Merge: ef780c8 ffcdbc4
+Author: Marwa Abd Elmoneim <61993883+Marwa996@users.noreply.github.com>
+Date:   Wed Jul 10 15:19:20 2024 +0300
+
+    Merge pull request #1 from Marwa996/enhancement/theme
+    
+    Enhancement/theme
+
+[33mcommit ffcdbc4e45337c68d0dd85a59b1b661b95a5a24b[m
+Author: Marwa996 <m.abdelmoneim@tildetech.ae>
+Date:   Wed Jul 10 15:16:18 2024 +0300
+
+    adding custom theme color example to be used to the future themeing
+
+[33mcommit ee3531a3765ad2eb8a90d3b1114c044369acf4c9[m
+Author: Marwa996 <m.abdelmoneim@tildetech.ae>
+Date:   Mon Jun 24 16:49:10 2024 +0300
+
+    adding theming service to save in the local storage and editing theming styles
+
+[33mcommit ef780c89b32dc6e52b84811261d3a3db58425ff6[m
+Author: Marwa996 <m.abdelmoneim@tildetech.ae>
+Date:   Mon Jun 24 12:15:37 2024 +0300
+
+    adding pagination and filtering to the shared table and enhance table structure
+
+[33mcommit a5acbb2a9971a96e6957c0d94513a33b02b61c59[m
+Author: Marwa996 <m.abdelmoneim@tildetech.ae>
+Date:   Sun Jun 23 16:19:22 2024 +0300
+
+    Adding shared table and models
+
+[33mcommit 005d61f425b61ba8e555d3fbba5edc05ba4246bc[m[33m ([m[1;31morigin/enhancement/sidebar-and-navbar[m[33m)[m
+Author: Marwa996 <marwamoneim221@gmail.com>
+Date:   Mon Apr 1 16:55:50 2024 +0200
+
+    allowing theme changing with toggle
+
+[33mcommit 18bac5d2974c9564244d216246451373f0f9d24a[m
+Author: Marwa996 <marwamoneim221@gmail.com>
+Date:   Mon Apr 1 14:31:25 2024 +0200
+
+    adding dark theme
+
+[33mcommit a4a72a7b0b4021df738ec3a3e6ebce7aa3284c3c[m
+Author: Marwa996 <marwamoneim221@gmail.com>
+Date:   Mon Apr 1 14:12:39 2024 +0200
+
+    adding tabs instead of sidebar menu and creating custom theme
+
+[33mcommit 31fc42c43ebd9e4a0e84419a90a731e07706c937[m
+Author: marwaaIbrahim <144624278+marwaaIbrahim@users.noreply.github.com>
+Date:   Sat Jan 20 11:34:49 2024 +0200
+
+    Sidebar with responsive sidenav - Saving progress
+
+[33mcommit a39cb9cafd5f5ddf989ff18d4ed77eee51b932dd[m[33m ([m[1;31morigin/enhancement/main-page[m[33m)[m
+Author: Marwa996 <marwamoneim221@gmail.com>
+Date:   Thu Jan 18 00:07:44 2024 +0200
+
+    Initializing the app
+
+[33mcommit 2baa24195f5a084eb3b44dc572243da4669f8bcf[m
+Author: Marwa996 <61993883+Marwa996@users.noreply.github.com>
+Date:   Wed Jan 17 23:43:59 2024 +0200
+
+    Initial commit

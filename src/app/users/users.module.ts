@@ -24,7 +24,7 @@ import { SharedModule } from 'src/shared/libs/shared.module';
     RouterOutlet,
     MatButtonModule,
     MatTabsModule,
-    SharedModule
+    SharedModule,
   ],
   exports: []
 })

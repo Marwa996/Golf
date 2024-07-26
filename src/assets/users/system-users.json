@@ -1,0 +1,92 @@
+[
+  {
+    "image": "1",
+    "name": "Hydrogen",
+    "phoneNumber": 10079,
+    "passCode": 123,
+    "NIDNumber": 123,
+    "status": "active",
+    "createdAt": "20-10-2023"
+  },
+  {
+    "image": "2",
+    "name": "Helium",
+    "phoneNumber": 40026,
+    "passCode": 123,
+    "NIDNumber": 123,
+    "status": "active",
+    "createdAt": "20-10-2023"
+  },
+  {
+    "image": "3",
+    "name": "Lithium",
+    "phoneNumber": 6941,
+    "passCode": 123,
+    "NIDNumber": 123,
+    "status": "active",
+    "createdAt": "20-10-2023"
+  },
+  {
+    "image": "4",
+    "name": "Beryllium",
+    "phoneNumber": 90122,
+    "passCode": 123,
+    "NIDNumber": 123,
+    "status": "active",
+    "createdAt": "20-10-2023"
+  },
+  {
+    "image": "5",
+    "name": "Boron",
+    "phoneNumber": 10811,
+    "passCode": 123,
+    "NIDNumber": 123,
+    "status": "active",
+    "createdAt": "20-10-2023"
+  },
+  {
+    "image": "6",
+    "name": "Carbon",
+    "phoneNumber": 120107,
+    "passCode": 123,
+    "NIDNumber": 123,
+    "status": "active",
+    "createdAt": "20-10-2023"
+  },
+  {
+    "image": "7",
+    "name": "Nitrogen",
+    "phoneNumber": 140067,
+    "passCode": 123,
+    "NIDNumber": 123,
+    "status": "active",
+    "createdAt": "20-10-2023"
+  },
+  {
+    "image": "8",
+    "name": "Oxygen",
+    "phoneNumber": 159994,
+    "passCode": 123,
+    "NIDNumber": 123,
+    "status": "active",
+    "createdAt": "20-10-2023"
+  },
+  {
+    "image": "9",
+    "name": "Fluorine",
+    "phoneNumber": 189984,
+    "passCode": 123,
+    "NIDNumber": 123,
+    "status": "active",
+    "createdAt": "20-10-2023"
+  },
+  {
+    "image": "10",
+    "name": "Neon",
+    "phoneNumber": 201797,
+    "passCode": 123,
+    "NIDNumber": 123,
+    "status": "active",
+    "createdAt": "20-10-2023"
+  }
+]

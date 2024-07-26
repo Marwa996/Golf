@@ -1,1 +1,7 @@
-System Users
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+<golf-table
+  *ngIf="!isLoading"
+  [data]="systemUsersData"
+  [columns]="systemUsersDisplayedColumns"
+  tableName="System Users"
+></golf-table>
