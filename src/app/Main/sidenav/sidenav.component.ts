@@ -29,19 +29,19 @@ export class SidenavComponent implements OnInit {
   menuItems = signal<MenuItem[]>([
     {
       icon: 'dashboard',
-      label: 'Main',
+      label: $localize`Main`,
       route: 'main',
       categories: ['products', 'prices'],
     },
     {
       icon: 'add_shopping_cart',
-      label: 'Products',
+      label: $localize`Products`,
       route: 'products',
       categories: ['users', 'clients'],
     },
     {
       icon: 'people',
-      label: 'Users',
+      label: $localize`Users`,
       route: 'users',
       categories: ['complaints', 'requests'],
     },

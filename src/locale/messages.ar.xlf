@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="3815928829326879804" datatype="html">
+        <source>Main</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/sidenav/sidenav.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6707361102856436710" datatype="html">
+        <source>Products</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/sidenav/sidenav.component.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/products/products.component.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4555457172864212828" datatype="html">
+        <source>Users</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/main/sidenav/sidenav.component.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8492075355191280346" datatype="html">
+        <source>Prices</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/products/products.component.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1902100407096396858" datatype="html">
+        <source>Categories</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/products/products.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8953033926734869941" datatype="html">
+        <source>Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/products/products/products-page.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5265520188056210631" datatype="html">
+        <source>Category Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/products/products/products-page.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8829497237648100098" datatype="html">
+        <source>Filter</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/shared/libs/components/table/table.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3678587636556283620" datatype="html">
+        <source> No data matching the filter &quot;<x id="INTERPOLATION" equiv-text="{{ input.value }}"/>&quot; </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/shared/libs/components/table/table.component.html</context>
+          <context context-type="linenumber">23,25</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

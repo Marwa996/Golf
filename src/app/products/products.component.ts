@@ -1,15 +1,19 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
-    selector:'app-products',
-    templateUrl: 'products.component.html',
-    styleUrls:['products.component.scss']
+  selector: 'app-products',
+  templateUrl: 'products.component.html',
+  styleUrls: ['products.component.scss'],
 })
-export class ProductsComponent{
-  links = [{name:'Products', route:'products'}, {name:'Prices', route:'price-list'}, {name:'Categories', route:'categories'}];
+export class ProductsComponent {
+  links = [
+    { name: $localize`Products`, route: 'products' },
+    { name: $localize`Prices`, route: 'price-list' },
+    { name: $localize`Categories`, route: 'categories' },
+  ];
   activeLink = this.links[0].route;
 
-  toggle(route:string){
+  toggle(route: string) {
     this.activeLink = route;
   }
 }

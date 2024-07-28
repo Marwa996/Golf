@@ -6,7 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "extract-i18n": "ng extract-i18n --output-path src/locale --out-file messages.ar.xlf --format xlf",
+    "xliffmerge": "xliffmerge --profile xliffmerge.json",
+    "i18n": "npm run extract-i18n && npm run xliffmerge"
   },
   "private": true,
   "dependencies": {
@@ -28,6 +31,7 @@
     "@angular-devkit/build-angular": "^16.1.8",
     "@angular/cli": "~16.1.8",
     "@angular/compiler-cli": "^16.1.0",
+    "@angular/localize": "^16.2.12",
     "@types/jasmine": "~4.3.0",
     "jasmine-core": "~4.6.0",
     "karma": "~6.4.0",
@@ -35,6 +39,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "typescript": "~5.1.3"
+    "typescript": "~5.1.3",
+    "xliffmerge": "^1.0.0"
   }
 }

@@ -1,7 +1,7 @@
-Products
 <mat-progress-spinner *ngIf="isLoading"></mat-progress-spinner>
-<golf-table *ngIf="!isLoading"
-[data]="products"
-[columns]="productsDisplayedColumns"
-tableName="Products"
+<golf-table
+  *ngIf="!isLoading"
+  [data]="products"
+  [columns]="productsDisplayedColumns"
+  tableName="Products"
 ></golf-table>
