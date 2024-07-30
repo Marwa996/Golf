@@ -7,7 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ProductsModule } from './products/products.module';
 import { ProductsRoutingModule } from './products/products-routing.module';
 import { UsersModule } from './users/users.module';
-import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,7 +18,6 @@ import { MatButtonModule } from '@angular/material/button';
     ProductsModule,
     UsersModule,
     ProductsRoutingModule,
-    MatButtonModule,
   ],
   providers: [Document],
   bootstrap: [AppComponent],

@@ -10,6 +10,8 @@ import { MarketingManagersPageComponent } from './matketing-managers/marketing-m
 import { CustomerServiceRepresentativesComponent } from './customer-service-representatives/customer-service-representatives.component';
 import { MarketingRepresentativesPageComponent } from './marketing-representatives/marketing-representatives.component';
 import { SharedModule } from 'src/shared/libs/shared.module';
+import { SupervisorComponent } from './supervisor/supervisor.component';
+import { CustomerServiceManagersComponent } from './customer-service-managers/customer-service-managers.component';
 @NgModule({
   declarations: [
     UsersComponent,
@@ -17,6 +19,8 @@ import { SharedModule } from 'src/shared/libs/shared.module';
     MarketingManagersPageComponent,
     CustomerServiceRepresentativesComponent,
     MarketingRepresentativesPageComponent,
+    SupervisorComponent,
+    CustomerServiceManagersComponent,
   ],
   imports: [
     BrowserModule,
