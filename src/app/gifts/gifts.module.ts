@@ -4,12 +4,12 @@ import { AppRoutingModule } from '../app-routing.module';
 import { RouterOutlet } from '@angular/router';
 import { MatTabsModule } from '@angular/material/tabs';
 import { SharedModule } from 'src/shared/libs/shared.module';
-import { GiftsSectionComponent } from './gifts.component';
+import { GiftsComponent } from './gifts.component';
 import { ReportsComponent } from './reports/reports.component';
-import { GiftsComponent } from './gifts/gifts.component';
+import { GiftsPageComponent } from './gifts/gifts.component';
 
 @NgModule({
-  declarations: [GiftsSectionComponent, ReportsComponent, GiftsComponent],
+  declarations: [GiftsComponent, ReportsComponent, GiftsPageComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

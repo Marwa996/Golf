@@ -5,11 +5,11 @@ import { RouterOutlet } from '@angular/router';
 import { MatTabsModule } from '@angular/material/tabs';
 import { SharedModule } from 'src/shared/libs/shared.module';
 import { VisitsComponent } from './visits.component';
-import { DistributersComponent } from './distributers/distributers.component';
 import { SellersComponent } from './sellers/sellers.component';
+import { DistributerComponent } from './distributer/distributer.component';
 
 @NgModule({
-  declarations: [VisitsComponent, DistributersComponent, SellersComponent],
+  declarations: [VisitsComponent, DistributerComponent, SellersComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

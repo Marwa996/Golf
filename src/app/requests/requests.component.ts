@@ -5,4 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './requests.component.html',
   styleUrls: ['./requests.component.scss'],
 })
-export class RequestsSectionComponent {}
+export class RequestsComponent {}

@@ -7,7 +7,7 @@ import { SharedModule } from 'src/shared/libs/shared.module';
 import { SettingsComponent } from './settings.component';
 import { CompaniesPriceListsComponent } from './companies-price-lists/companies-price-lists.component';
 import { CouponsComponent } from './coupons/coupons.component';
-import { DistributersComponent } from './distributers/distributers.component';
+import { DistributerComponent } from './distributer/distributer.component';
 import { OffersComponent } from './offers/offers.component';
 import { SellersComponent } from './sellers/sellers.component';
 import { VisitResultsComponent } from './visit-results/visit-results.component';
@@ -18,7 +18,7 @@ import { VisitTypesComponent } from './visit-types/visit-types.component';
     SettingsComponent,
     CompaniesPriceListsComponent,
     CouponsComponent,
-    DistributersComponent,
+    DistributerComponent,
     OffersComponent,
     SellersComponent,
     VisitResultsComponent,
