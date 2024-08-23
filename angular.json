@@ -72,10 +72,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Golf:build:production"
+              "buildTarget": "Golf:build:production"
             },
             "development": {
-              "browserTarget": "Golf:build:development"
+              "buildTarget": "Golf:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +83,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Golf:build"
+            "buildTarget": "Golf:build"
           }
         },
         "test": {
