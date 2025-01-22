@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class ProductsComponent {
   links = [
-    { name: $localize`Products`, route: 'products' },
-    { name: $localize`Prices`, route: 'price-list' },
-    { name: $localize`Categories`, route: 'categories' },
+    { name:'الاصناف', route: 'categories' },
+    { name: 'المنتجات', route: 'products' },
+    { name: 'قائمة الاسعار', route: 'price-list' },
   ];
   activeLink = this.links[0].route;
 

@@ -7,13 +7,17 @@ import { Component } from '@angular/core';
 })
 export class UsersComponent {
   links = [
-    { name: 'Marketing Representatives', route: 'marketing-representatives' },
+    { name: "المراقب العام", route: 'supervisor' },
+
+    { name: 'مديرين التسويق', route: 'marketing-managers' },
+    { name: "مديرين خدمة العملاء", route: 'customer-service-managers' },
+
+    { name: 'مناديب التسويق', route: 'marketing-representatives' },
     {
-      name: 'Customer Service Representative',
+      name: 'مناديب خدمة العملاء',
       route: 'customer-service-representative',
     },
-    { name: 'Marketing Managers', route: 'marketing-managers' },
-    { name: 'System Users', route: 'system-users' },
+    { name: 'مستخدمين النظام', route: 'system-users' },
   ];
   activeLink = this.links[0].route;
 

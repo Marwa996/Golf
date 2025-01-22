@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-supervisor',
+  selector: 'users-supervisor',
   templateUrl: './supervisor.component.html',
   styleUrls: ['./supervisor.component.scss']
 })
