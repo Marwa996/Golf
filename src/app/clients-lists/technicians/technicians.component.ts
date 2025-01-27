@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-technicians',
+  selector: 'clients-list-technicians',
   templateUrl: './technicians.component.html',
-  styleUrls: ['./technicians.component.scss']
+  styleUrls: ['./technicians.component.scss'],
 })
-export class TechniciansComponent {
-
-}
+export class TechniciansComponent {}
