@@ -2,6 +2,7 @@
 <golf-table
   *ngIf="!isLoading"
   [data]="products"
-  [columns]="productsDisplayedColumns"
+  [columns]="productsDisplayedColumns.data"
+  [actions]="productsDisplayedColumns.actions"
   tableName="Products"
 ></golf-table>

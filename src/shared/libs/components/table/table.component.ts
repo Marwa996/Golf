@@ -18,6 +18,7 @@ export class GolfTableComponent<T> implements OnInit, AfterViewInit {
   @Input({ required: true }) data!: T[];
   @Input({ required: true }) columns!: TableDefinition<T>[];
   @Input({ required: true }) tableName!: string;
+  @Input({ required: false }) actions!: {editAction?:(item: T) => any, deleteAction?: (item: T) => any}[];
   displayedColumns: string[] = [];
   dataSource!: MatTableDataSource<T>;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
