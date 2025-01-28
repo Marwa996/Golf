@@ -19,4 +19,4 @@ import { DistributerComponent } from './distributer/distributer.component';
   ],
   exports: [],
 })
-export class UsersModule {}
+export class VisitsModule {}

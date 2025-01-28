@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-closed-requests',
+  selector: 'requests-closed-requests',
   templateUrl: './closed-requests.component.html',
-  styleUrls: ['./closed-requests.component.scss']
+  styleUrls: ['./closed-requests.component.scss'],
 })
-export class ClosedRequestsComponent {
-
-}
+export class ClosedRequestsComponent {}

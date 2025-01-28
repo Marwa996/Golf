@@ -19,4 +19,4 @@ import { BillsComponent } from './bills.component';
   ],
   exports: [],
 })
-export class UsersModule {}
+export class BillsModule {}

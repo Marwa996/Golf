@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-closed-complaints',
+  selector: 'requests-closed-complaints',
   templateUrl: './closed-complaints.component.html',
-  styleUrls: ['./closed-complaints.component.scss']
+  styleUrls: ['./closed-complaints.component.scss'],
 })
-export class ClosedComplaintsComponent {
-
-}
+export class ClosedComplaintsComponent {}

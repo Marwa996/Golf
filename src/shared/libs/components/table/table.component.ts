@@ -23,7 +23,6 @@ export class GolfTableComponent<T> implements OnInit, AfterViewInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   ngOnInit(): void {
-    console.log(this.data);
     this.dataSource = new MatTableDataSource(this.data);
     this.displayedColumns = this.columns.map((c) => c.columnDef);
   }

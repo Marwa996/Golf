@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-inactive-technicians',
+  selector: 'reports-inactive-technicians',
   templateUrl: './inactive-technicians.component.html',
-  styleUrls: ['./inactive-technicians.component.scss']
+  styleUrls: ['./inactive-technicians.component.scss'],
 })
-export class InactiveTechniciansComponent {
-
-}
+export class InactiveTechniciansComponent {}

@@ -1,1 +1,35 @@
-<p>settings works!</p>
+<nav mat-tab-nav-bar [tabPanel]="tabPanel">
+  <a
+    mat-tab-link
+    *ngFor="let link of links"
+    (click)="toggle(link.route)"
+    [active]="activeLink == link.route"
+  >
+    {{ link.name }}
+  </a>
+</nav>
+<mat-tab-nav-panel #tabPanel class="margin">
+  <div *ngIf="activeLink == 'coupons'">
+    <settings-coupons></settings-coupons>
+  </div>
+
+  <div *ngIf="activeLink == 'sellers'">
+    <settings-sellers></settings-sellers>
+  </div>
+
+  <div *ngIf="activeLink == 'distributer'">
+    <settings-distributer></settings-distributer>
+  </div>
+  <div *ngIf="activeLink == 'visits-types'">
+    <settings-visit-types></settings-visit-types>
+  </div>
+  <div *ngIf="activeLink == 'visits-results'">
+    <settings-visit-results></settings-visit-results>
+  </div>
+  <div *ngIf="activeLink == 'offers'">
+    <settings-offers></settings-offers>
+  </div>
+  <div *ngIf="activeLink == 'companies-price-lits'">
+    <settings-companies-price-lists></settings-companies-price-lists>
+  </div>
+</mat-tab-nav-panel>

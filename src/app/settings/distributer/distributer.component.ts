@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-distributer',
+  selector: 'settings-distributer',
   templateUrl: './distributer.component.html',
   styleUrls: ['./distributer.component.scss'],
 })

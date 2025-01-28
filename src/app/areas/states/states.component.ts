@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-states',
+  selector: 'areas-states',
   templateUrl: './states.component.html',
-  styleUrls: ['./states.component.scss']
+  styleUrls: ['./states.component.scss'],
 })
-export class StatesComponent {
-
-}
+export class StatesComponent {}

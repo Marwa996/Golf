@@ -1,1 +1,18 @@
-<p>areas works!</p>
+<nav mat-tab-nav-bar [tabPanel]="tabPanel">
+  <a
+    mat-tab-link
+    *ngFor="let link of links"
+    (click)="toggle(link.route)"
+    [active]="activeLink == link.route"
+  >
+    {{ link.name }}
+  </a>
+</nav>
+<mat-tab-nav-panel #tabPanel class="margin">
+  <div *ngIf="activeLink == 'states'">
+    <areas-states></areas-states>
+  </div>
+  <div *ngIf="activeLink == 'centers'">
+    <areas-centers></areas-centers>
+  </div>
+</mat-tab-nav-panel>

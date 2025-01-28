@@ -27,4 +27,4 @@ import { NewTechniciansComponent } from './new-technicians/new-technicians.compo
   ],
   exports: [],
 })
-export class UsersModule {}
+export class ReportsModule {}

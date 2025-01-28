@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-requests',
+  selector: 'requests-requests',
   templateUrl: './requests.component.html',
   styleUrls: ['./requests.component.scss'],
 })

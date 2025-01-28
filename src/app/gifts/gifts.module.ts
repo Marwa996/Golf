@@ -19,4 +19,4 @@ import { GiftsPageComponent } from './gifts/gifts.component';
   ],
   exports: [],
 })
-export class UsersModule {}
+export class GiftsModule {}

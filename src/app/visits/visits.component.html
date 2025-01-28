@@ -1,1 +1,19 @@
-<p>visits works!</p>
+<nav mat-tab-nav-bar [tabPanel]="tabPanel">
+  <a
+    mat-tab-link
+    *ngFor="let link of links"
+    (click)="toggle(link.route)"
+    [active]="activeLink == link.route"
+  >
+    {{ link.name }}
+  </a>
+</nav>
+<mat-tab-nav-panel #tabPanel class="margin">
+  <div *ngIf="activeLink == 'sellers'">
+    <visits-sellers></visits-sellers>
+  </div>
+
+  <div *ngIf="activeLink == 'distributer'">
+    <visits-distributer></visits-distributer>
+  </div>
+</mat-tab-nav-panel>

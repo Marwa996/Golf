@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-centers',
+  selector: 'areas-centers',
   templateUrl: './centers.component.html',
-  styleUrls: ['./centers.component.scss']
+  styleUrls: ['./centers.component.scss'],
 })
-export class CentersComponent {
-
-}
+export class CentersComponent {}

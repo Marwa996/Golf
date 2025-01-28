@@ -33,4 +33,4 @@ import { VisitTypesComponent } from './visit-types/visit-types.component';
   ],
   exports: [],
 })
-export class UsersModule {}
+export class SettingsModule {}

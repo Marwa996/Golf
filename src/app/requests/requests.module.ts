@@ -27,4 +27,4 @@ import { ClosedRequestsComponent } from './closed-requests/closed-requests.compo
   ],
   exports: [],
 })
-export class UsersModule {}
+export class RequestsModule {}

@@ -1,1 +1,26 @@
-<p>reports works!</p>
+<nav mat-tab-nav-bar [tabPanel]="tabPanel">
+  <a
+    mat-tab-link
+    *ngFor="let link of links"
+    (click)="toggle(link.route)"
+    [active]="activeLink == link.route"
+  >
+    {{ link.name }}
+  </a>
+</nav>
+<mat-tab-nav-panel #tabPanel class="margin">
+  <div *ngIf="activeLink == 'new-technicians'">
+    <reports-new-technicians></reports-new-technicians>
+  </div>
+
+  <div *ngIf="activeLink == 'inactive-technicians'">
+    <reports-inactive-technicians></reports-inactive-technicians>
+  </div>
+
+  <div *ngIf="activeLink == 'new-sellers'">
+    <reports-new-sellers></reports-new-sellers>
+  </div>
+  <div *ngIf="activeLink == 'inactive-sellers'">
+    <reports-inactive-sellers></reports-inactive-sellers>
+  </div>
+</mat-tab-nav-panel>

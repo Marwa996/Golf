@@ -21,4 +21,4 @@ import { AreasComponent } from './areas.component';
   ],
   exports: [],
 })
-export class UsersModule {}
+export class AreasModule {}

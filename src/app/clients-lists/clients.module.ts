@@ -29,4 +29,4 @@ import { TechniciansComponent } from './technicians/technicians.component';
   ],
   exports: [],
 })
-export class UsersModule {}
+export class ClientsListsModule {}

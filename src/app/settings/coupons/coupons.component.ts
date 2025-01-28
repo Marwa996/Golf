@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-coupons',
+  selector: 'settings-coupons',
   templateUrl: './coupons.component.html',
-  styleUrls: ['./coupons.component.scss']
+  styleUrls: ['./coupons.component.scss'],
 })
-export class CouponsComponent {
-
-}
+export class CouponsComponent {}
