@@ -29,21 +29,69 @@ export class SidenavComponent implements OnInit {
   menuItems = signal<MenuItem[]>([
     {
       icon: 'dashboard',
-      label: 'Main',
+      label: `الرئيسية`,
       route: 'main',
-      categories: ['products', 'prices'],
+      // categories: ['products', 'prices'],
     },
     {
       icon: 'add_shopping_cart',
-      label: 'Products',
+      label: `المنتجات`,
       route: 'products',
-      categories: ['users', 'clients'],
+      // categories: ['users', 'clients'],
     },
     {
       icon: 'people',
-      label: 'Users',
+      label: `المستخدمين`,
       route: 'users',
-      categories: ['complaints', 'requests'],
+      // categories: ['complaints', 'requests'],
+    },
+    {
+      icon: 'people',
+      label: `قائمة العملاء`,
+      route: 'clients-lists',
+      // categories: ['complaints', 'requests'],
+    },
+    {
+      icon: 'location_on',
+      label: `المناطق`,
+      route: 'areas',
+      // categories: ['complaints', 'requests'],
+    },
+    {
+      icon: 'card_giftcard',
+      label: `الهدايا`,
+      route: 'gifts',
+      // categories: ['complaints', 'requests'],
+    },
+    {
+      icon: 'report',
+      label: `الشكاوي والطلبات`,
+      route: 'requests',
+      // categories: ['complaints', 'requests'],
+    },
+    {
+      icon: 'move_to_inbox',
+      label: `الطلبات`,
+      route: 'reports',
+      // categories: ['complaints', 'requests'],
+    },
+    {
+      icon: 'file_copy',
+      label: `الفواتير`,
+      route: 'bills',
+      // categories: ['complaints', 'requests'],
+    },
+    {
+      icon: 'directions_walk',
+      label: `الزيارات`,
+      route: 'visits',
+      // categories: ['complaints', 'requests'],
+    },
+    {
+      icon: 'settings',
+      label: `الاعدادات`,
+      route: 'settings',
+      // categories: ['complaints', 'requests'],
     },
   ]);
 

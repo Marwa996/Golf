@@ -1,0 +1,26 @@
+<nav mat-tab-nav-bar [tabPanel]="tabPanel">
+  <a
+    mat-tab-link
+    *ngFor="let link of links"
+    (click)="toggle(link.route)"
+    [active]="activeLink == link.route"
+  >
+    {{ link.name }}
+  </a>
+</nav>
+<mat-tab-nav-panel #tabPanel class="margin">
+  <div *ngIf="activeLink == 'complaints'">
+    <requests-complaints></requests-complaints>
+  </div>
+
+  <div *ngIf="activeLink == 'closed-complaints'">
+    <requests-closed-complaints></requests-closed-complaints>
+  </div>
+
+  <div *ngIf="activeLink == 'requests'">
+    <requests-requests></requests-requests>
+  </div>
+  <div *ngIf="activeLink == 'closed-requests'">
+    <requests-closed-requests></requests-closed-requests>
+  </div>
+</mat-tab-nav-panel>

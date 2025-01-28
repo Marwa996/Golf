@@ -1,0 +1,19 @@
+<nav mat-tab-nav-bar [tabPanel]="tabPanel">
+  <a
+    mat-tab-link
+    *ngFor="let link of links"
+    (click)="toggle(link.route)"
+    [active]="activeLink == link.route"
+  >
+    {{ link.name }}
+  </a>
+</nav>
+<mat-tab-nav-panel #tabPanel class="margin">
+  <div *ngIf="activeLink == 'gifts'">
+    <gifts-gifts></gifts-gifts>
+  </div>
+
+  <div *ngIf="activeLink == 'reports'">
+    <gifts-reports></gifts-reports>
+  </div>
+</mat-tab-nav-panel>

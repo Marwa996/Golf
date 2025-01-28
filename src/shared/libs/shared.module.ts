@@ -8,10 +8,14 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { HttpClientModule } from '@angular/common/http';
+import {
+  provideHttpClient,
+  withInterceptorsFromDi,
+} from '@angular/common/http';
 
 @NgModule({
   declarations: [GolfTableComponent],
+  exports: [GolfTableComponent, MatProgressSpinnerModule],
   imports: [
     BrowserModule,
     MatButtonModule,
@@ -21,8 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatFormFieldModule,
     MatInputModule,
     MatProgressSpinnerModule,
-    HttpClientModule
   ],
-  exports: [GolfTableComponent, MatProgressSpinnerModule],
+  providers: [provideHttpClient(withInterceptorsFromDi())],
 })
 export class SharedModule {}
