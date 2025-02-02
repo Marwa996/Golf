@@ -40,15 +40,25 @@ export class ProductsPageComponent {
       },
     ],
     actions: [
-      { editAction: (product: Product) => product },
-      { deleteAction: (product: Product) => product },
+      {
+        action: (product: Product) => this.edit(product),
+        conditionToShow: (product: Product) => { return true },
+        icon: 'edit'
+      },
+      {
+        action: (product: Product) => { return null },
+        conditionToShow: (product: Product) => { return false },
+        icon: 'delete'
+      },
     ],
   };
 
   constructor(private productService: ProductService) {
     this.getProducts();
   }
-
+  edit(product: Product) {
+    //
+  }
   getProducts() {
     this.productService.getProducts().subscribe((data: Product[]) => {
       this.products = data;
