@@ -1,28 +1,37 @@
 <mat-form-field>
-  <mat-label i18n>Filter</mat-label>
-  <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium" #input />
+  <mat-label>ابحث</mat-label>
+  <input matInput (keyup)="applyFilter($event)" #input />
 </mat-form-field>
 <div class="mat-elevation-z8">
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
-    <ng-container
-      *ngFor="let column of columns"
-      [matColumnDef]="column.columnDef"
-    >
+    <ng-container *ngFor="let column of columns" [matColumnDef]="column.columnDef">
       <th mat-header-cell *matHeaderCellDef>
         {{ column.header }}
       </th>
       <td mat-cell *matCellDef="let row">
         {{ column.cell(row) }}
       </td>
-      
-    </ng-container>
 
+    </ng-container>
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef i18n>Actions</th>
+      <td mat-cell *matCellDef="let row">
+        <div class="row">
+          <div *ngFor="let action of actions">
+            <button mat-button *ngIf="action.conditionToShow(row)" (click)="action.action(row)">
+              {{action.label?? action.label}}
+              <mat-icon *ngIf="action.icon">{{action.icon}}</mat-icon>
+            </button>
+          </div>
+        </div>
+      </td>
+    </ng-container>
     <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
     <!-- Row shown when there is no matching data. -->
     <tr class="mat-row" *matNoDataRow>
       <td class="mat-cell" colspan="4" i18n>
-       لم يتم العثور على اي بيانات "{{ input.value }}"
+        لم يتم العثور على اي بيانات "{{ input.value }}"
       </td>
     </tr>
   </table>
