@@ -3,3 +3,9 @@ export interface TableDefinition<T> {
   header: string;
   cell: (element: T) => string;
 }
+export interface tableActions<T> {
+  action: (item: T) => void;
+  conditionToShow: (item: T) => void;
+  icon?: string;
+  label?: string;
+}

@@ -12,6 +12,7 @@ import {
   provideHttpClient,
   withInterceptorsFromDi,
 } from '@angular/common/http';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [GolfTableComponent],
@@ -25,6 +26,7 @@ import {
     MatFormFieldModule,
     MatInputModule,
     MatProgressSpinnerModule,
+    MatIconModule,
   ],
   providers: [provideHttpClient(withInterceptorsFromDi())],
 })

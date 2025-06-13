@@ -5,7 +5,7 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
-import { TableDefinition } from '../../models';
+import { tableActions, TableDefinition } from '../../models';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 
@@ -18,6 +18,7 @@ export class GolfTableComponent<T> implements OnInit, AfterViewInit {
   @Input({ required: true }) data!: T[];
   @Input({ required: true }) columns!: TableDefinition<T>[];
   @Input({ required: true }) tableName!: string;
+  @Input({ required: false }) actions!: tableActions<T>[]
   displayedColumns: string[] = [];
   dataSource!: MatTableDataSource<T>;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -25,6 +26,7 @@ export class GolfTableComponent<T> implements OnInit, AfterViewInit {
   ngOnInit(): void {
     this.dataSource = new MatTableDataSource(this.data);
     this.displayedColumns = this.columns.map((c) => c.columnDef);
+    if (this.actions) this.displayedColumns = [...this.displayedColumns, 'actions']
   }
 
   ngAfterViewInit(): void {

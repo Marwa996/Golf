@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-products',
@@ -7,13 +8,14 @@ import { Component } from '@angular/core';
 })
 export class ProductsComponent {
   links = [
-    { name:'الاصناف', route: 'categories' },
+    { name: 'الاصناف', route: 'categories' },
     { name: 'المنتجات', route: 'products' },
     { name: 'قائمة الاسعار', route: 'price-list' },
   ];
-  activeLink = this.links[0].route;
+  activeLink = '';
 
-  toggle(route: string) {
-    this.activeLink = route;
+  constructor(private route: ActivatedRoute, private router: Router) {
+    this.activeLink = this.router.url + this.links[0];
   }
+
 }

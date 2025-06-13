@@ -10,43 +10,59 @@ import { ProductService } from 'src/shared/libs/services/product/product.service
 export class ProductsPageComponent {
   isLoading = true;
   products!: Product[];
-  productsDisplayedColumns = [
-    {
-      columnDef: 'name',
-      header: $localize`Name`,
-      cell: (product: Product) => `${product.name}`,
-    },
-    {
-      columnDef: 'category',
-      header: $localize`Category Name`,
-      cell: (product: Product) => `${product.category}`,
-    },
-    {
-      columnDef: 'status',
-      header: 'Status',
-      cell: (product: Product) => `${product.status}`,
-    },
-    {
-      columnDef: 'createdBy',
-      header: 'Created By',
-      cell: (product: Product) => `${product.createdBy}`,
-    },
-    {
-      columnDef: 'createdAt',
-      header: 'Created At',
-      cell: (product: Product) => `${product.createdAt}`,
-    },
-  ];
+  productsDisplayedColumns = {
+    data: [
+      {
+        columnDef: 'name',
+        header: 'اسم المنتج',
+        cell: (product: Product) => `${product.name}`,
+        editAction: (product: Product) => product,
+      },
+      {
+        columnDef: 'category',
+        header: 'اسم الصنف',
+        cell: (product: Product) => `${product.category}`,
+      },
+      {
+        columnDef: 'status',
+        header: 'الحالة',
+        cell: (product: Product) => `${product.status}`,
+      },
+      {
+        columnDef: 'createdBy',
+        header: 'تم بواسطة',
+        cell: (product: Product) => `${product.createdBy}`,
+      },
+      {
+        columnDef: 'createdAt',
+        header: 'تاريخ الانشاء',
+        cell: (product: Product) => `${product.createdAt}`,
+      },
+    ],
+    actions: [
+      {
+        action: (product: Product) => this.edit(product),
+        conditionToShow: (product: Product) => { return true },
+        icon: 'edit'
+      },
+      {
+        action: (product: Product) => { return null },
+        conditionToShow: (product: Product) => { return false },
+        icon: 'delete'
+      },
+    ],
+  };
 
   constructor(private productService: ProductService) {
     this.getProducts();
   }
-
+  edit(product: Product) {
+    //
+  }
   getProducts() {
     this.productService.getProducts().subscribe((data: Product[]) => {
       this.products = data;
       this.isLoading = false;
     });
-    console.log(this.products);
   }
 }

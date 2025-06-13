@@ -4,11 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from '../app-routing.module';
 import { RouterOutlet } from '@angular/router';
 import { ProductsComponent } from './products.component';
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatTabsModule } from '@angular/material/tabs';
 import { ProductsPageComponent } from './products/products-page.component';
 import { CategoriesPageComponent } from './categories/categories-page.component';
 import { PriceListPageComponent } from './price-list/price-list-page.component';
 import { SharedModule } from 'src/shared/libs/shared.module';
+import { CommonModule } from '@angular/common';
 @NgModule({
   declarations: [
     ProductsComponent,
@@ -17,7 +18,7 @@ import { SharedModule } from 'src/shared/libs/shared.module';
     PriceListPageComponent
   ],
   imports: [
-    BrowserModule,
+    CommonModule,
     AppRoutingModule,
     RouterOutlet,
     MatButtonModule,
