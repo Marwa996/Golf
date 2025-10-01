@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ThemeService } from 'src/shared/libs/services/theme/theme.service';
+import { LocalStorageService, ThemeService } from '@shared/core';
+import { THEME_KEY, ThemeType } from '@shared/data';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +9,17 @@ import { ThemeService } from 'src/shared/libs/services/theme/theme.service';
 })
 export class AppComponent implements OnInit {
   title = 'Golf';
-  constructor(private themeService: ThemeService) {}
+  currentMode!: ThemeType;
+
+  constructor(
+    private themeService: ThemeService, private localStorageService: LocalStorageService
+  ) {}
+
   ngOnInit(): void {
-    this.themeService.setItem('darkMode', 'on');
-  }
-}
+    this.currentMode = (this.localStorageService.getItem(THEME_KEY) ?? '') as ThemeType;
+    if (!this.currentMode) {
+      this.localStorageService.setItem(THEME_KEY, ThemeType.Dark);
+      this.currentMode = ThemeType.Dark;
+    }
+    this.themeService.setThemeMode(this.currentMode)
+}}

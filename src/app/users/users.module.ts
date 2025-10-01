@@ -9,7 +9,7 @@ import { SystemUsersPageComponent } from './system-users/system-users.component'
 import { MarketingManagersPageComponent } from './matketing-managers/marketing-managers.component';
 import { CustomerServiceRepresentativesComponent } from './customer-service-representatives/customer-service-representatives.component';
 import { MarketingRepresentativesPageComponent } from './marketing-representatives/marketing-representatives.component';
-import { SharedModule } from 'src/shared/libs/shared.module';
+import { SharedModule } from 'src/shared/shared.module';
 import { SupervisorComponent } from './supervisor/supervisor.component';
 import { CustomerServiceManagersComponent } from './customer-service-managers/customer-service-managers.component';
 @NgModule({

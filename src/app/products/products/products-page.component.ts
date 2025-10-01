@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Product } from 'src/shared/libs/models/product.model';
-import { ProductService } from 'src/shared/libs/services/product/product.service';
+import { Product } from 'src/shared/data/models';
+import { ProductService } from 'src/shared/services/product/product.service';
 
 @Component({
   selector: 'products-products-page',

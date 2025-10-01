@@ -1,19 +1,19 @@
-// __<<ngM2ThemingMigrationEscapedComment0>>__
-
-// html, body { height: 100%; }
-// body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
 @use "@angular/material" as mat;
 @use "./theme.scss" as custom;
+@use "./m3-theme.scss";
+
 @include mat.core();
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+
+// html {
+//   // Apply the light theme by default
+//   @include mat.core-theme(m3-theme.$dark-theme);
+// }
 
 body {
   margin: 0;
+  padding: 0;
+    box-sizing: border-box;
+
   position: relative;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
@@ -41,22 +41,27 @@ $light-theme: mat.m2-define-light-theme(
   )
 );
 
-// @include mat.all-component-themes($light-theme);
 
-.theme-dark {
-  @include mat.core();
-  @include mat.all-component-themes($dark-theme);
+.dark-theme {
+  // @include mat.all-component-themes($dark-theme);
+    @include mat.all-component-colors($dark-theme);
+
 }
 
-.theme-light {
-  @include mat.core();
-  @include mat.all-component-themes($light-theme);
+.light-theme {
+  // @include mat.all-component-themes($light-theme);
+    @include mat.all-component-colors($light-theme);
+
 }
 
 @media (prefers-color-scheme: light) {
-  @include mat.all-component-themes($light-theme);
+  // @include mat.all-component-themes($light-theme);
+    @include mat.all-component-colors($light-theme);
+
 }
 
 @media (prefers-color-scheme: dark) {
-  @include mat.all-component-themes($dark-theme);
+  // @include mat.all-component-themes($dark-theme);
+    @include mat.all-component-colors($dark-theme);
+
 }
