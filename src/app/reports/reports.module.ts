@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from '../app-routing.module';
 import { RouterOutlet } from '@angular/router';
 import { MatTabsModule } from '@angular/material/tabs';
-import { SharedModule } from 'src/shared/libs/shared.module';
+import { SharedModule } from 'src/shared/shared.module';
 import { InactiveSellersComponent } from './inactive-sellers/inactive-sellers.component';
 import { InactiveTechniciansComponent } from './inactive-technicians/inactive-technicians.component';
 import { ReportsComponent } from './reports.component';

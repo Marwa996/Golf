@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
-import { User } from "src/shared/libs/models";
-import { UserService } from "src/shared/libs/services/user/user.service";
+import { User } from "src/shared/data";
+import { UserService } from "src/shared/services/user/user.service";
 
 @Component({
     selector:'users-system-users-page',

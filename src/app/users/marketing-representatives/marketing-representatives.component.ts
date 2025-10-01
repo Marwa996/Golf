@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TableDefinition, User } from 'src/shared/libs/models';
+import { TableDefinition, User } from 'src/shared/data';
 
 @Component({
   selector: 'users-marketing-representatives-page',
