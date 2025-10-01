@@ -6,9 +6,8 @@ import {
   signal,
 } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { ThemeService } from 'src/shared/services/core/theme/theme.service';
-import { THEME_KEY, ThemeType } from 'src/shared/data';
-import { LocalStorageService } from 'src/shared/services/core/local-storage/local-storage.service';
+import { LocalStorageService, ThemeService } from '@shared/core'
+import { THEME_KEY, ThemeType } from '@shared/data';
 @Component({
   selector: 'app-sidenav',
   templateUrl: './sidenav.component.html',

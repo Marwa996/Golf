@@ -25,8 +25,8 @@
     ],
     "paths": {
       "@shared/data": ["src/shared/data/index.ts"],
-      "@shared/service": ["src/shared/service/index.ts"],
-      "@shared/core": ["src/shared/service/core/index.ts"],
+      "@shared/service": ["src/shared/services/index.ts"],
+      "@shared/core": ["src/shared/services/core/index.ts"]
     }
   },
   "angularCompilerOptions": {

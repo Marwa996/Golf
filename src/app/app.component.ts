@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { THEME_KEY, ThemeType } from 'src/shared/data';
-import { LocalStorageService } from 'src/shared/services/core/local-storage/local-storage.service';
-import { ThemeService } from 'src/shared/services/core/theme/theme.service';
+import { LocalStorageService, ThemeService } from '@shared/core';
+import { THEME_KEY, ThemeType } from '@shared/data';
 
 @Component({
   selector: 'app-root',
