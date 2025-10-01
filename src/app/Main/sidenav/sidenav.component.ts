@@ -1,29 +1,25 @@
 import {
+  AfterViewInit,
   Component,
-  HostBinding,
   OnInit,
   computed,
   signal,
 } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { OverlayContainer } from '@angular/cdk/overlay';
-import { ThemeService } from 'src/shared/libs/services/theme/theme.service';
+import { ThemeService } from 'src/shared/services/core/theme/theme.service';
+import { THEME_KEY, ThemeType } from 'src/shared/data';
+import { LocalStorageService } from 'src/shared/services/core/local-storage/local-storage.service';
 @Component({
   selector: 'app-sidenav',
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss'],
 })
-export class SidenavComponent implements OnInit {
-  @HostBinding('class') className = '';
-  darkClass = 'theme-dark';
-  lightClass = 'theme-light';
+export class SidenavComponent implements OnInit, AfterViewInit {
   switchTheme = new FormControl(false);
 
-  isDarkMode: boolean = false;
-
   constructor(
-    private overlay: OverlayContainer,
-    private themeService: ThemeService
+    private themeService: ThemeService,
+    private localStorageService: LocalStorageService
   ) {}
 
   menuItems = signal<MenuItem[]>([
@@ -71,7 +67,7 @@ export class SidenavComponent implements OnInit {
     },
     {
       icon: 'move_to_inbox',
-      label: `الطلبات`,
+      label: `التقارير`,
       route: 'reports',
       // categories: ['complaints', 'requests'],
     },
@@ -104,16 +100,17 @@ export class SidenavComponent implements OnInit {
 
   ngOnInit(): void {
     this.switchTheme.valueChanges.subscribe((currentMode) => {
-      this.className = currentMode ? this.darkClass : this.lightClass;
-
       if (currentMode) {
-        this.themeService.isDarkMode(!this.isDarkMode);
-        this.overlay.getContainerElement().classList.add(this.darkClass);
+        this.themeService.setThemeMode(ThemeType.Dark);
       } else {
-        this.themeService.isDarkMode(this.isDarkMode);
-        this.overlay.getContainerElement().classList.remove(this.lightClass);
+        this.themeService.setThemeMode(ThemeType.Light);
       }
     });
+  }
+  ngAfterViewInit(): void {
+    const themeType = this.localStorageService.getItem(THEME_KEY);
+    if (themeType === ThemeType.Light) this.switchTheme.setValue(false);
+    if (themeType === ThemeType.Dark) this.switchTheme.setValue(true);
   }
 }
 

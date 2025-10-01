@@ -1,1 +1,1 @@
-export * from './theme-classes'
+export * from './theme'

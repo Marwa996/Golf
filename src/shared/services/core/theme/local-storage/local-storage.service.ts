@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class LocalStorageService {
 
-  setThemeState(key: string, value: string): void {
+  setItem(key: string, value: string): void {
     localStorage.setItem(key, value);
   }
 
